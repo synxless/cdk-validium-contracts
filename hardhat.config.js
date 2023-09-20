@@ -131,6 +131,16 @@ module.exports = {
         count: 20,
       },
     },
+    trustless: {
+      url: process.env.L1_RPC || '',
+      accounts: [process.env.PRIVATE_KEY_DEPLOYER || ethers.constants.HashZero],
+      // accounts: {
+      //   mnemonic: process.env.MNEMONIC || DEFAULT_MNEMONIC,
+      //   path: "m/44'/60'/0'/0",
+      //   initialIndex: 0,
+      //   count: 20,
+      // },
+    },
   },
   gasReporter: {
     enabled: !!process.env.REPORT_GAS,
